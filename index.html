@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Risk Assessment</title>
+</head>
+<body>
+    <h1>Personalized Health Risk Assessment</h1>
+    <form action="/assess" method="post">
+        Age: <input type="number" name="age" required><br>
+        Sex: 
+        <select name="sex" required>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select><br>
+        BMI: <input type="number" name="bmi" step="0.1" required><br>
+        Systolic BP: <input type="number" name="systolic_bp" required><br>
+        Diastolic BP: <input type="number" name="diastolic_bp" required><br>
+        Smoking: 
+        <input type="radio" name="smoking" value="yes"> Yes
+        <input type="radio" name="smoking" value="no" checked> No<br>
+        Family history of diabetes: 
+        <input type="radio" name="family_diabetes" value="yes"> Yes
+        <input type="radio" name="family_diabetes" value="no" checked> No<br>
+        Family history of heart disease: 
+        <input type="radio" name="family_heart" value="yes"> Yes
+        <input type="radio" name="family_heart" value="no" checked> No<br>
+        Physical Activity Level:
+        <select name="physical_activity" required>
+            <option value="high">High</option>
+            <option value="moderate">Moderate</option>
+            <option value="low">Low</option>
+        </select><br>
+        Diet Quality:
+        <select name="diet_quality" required>
+            <option value="good">Good</option>
+            <option value="average">Average</option>
+            <option value="poor">Poor</option>
+        </select><br><br>
+        <button type="submit">Assess Risk</button>
+    </form>
+</body>
+</html>

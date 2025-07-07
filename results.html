@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assessment Results</title>
+</head>
+<body>
+    <h1>Your Health Risk Results</h1>
+
+    <p><strong>Diabetes Risk:</strong> {{ diabetes_risk }}</p>
+    <p><strong>Heart Disease Risk:</strong> {{ heart_risk }}</p>
+    <p><strong>Obesity Risk:</strong> {{ obesity_risk }}</p>
+
+    <h2>Recommended Actions:</h2>
+    <ul>
+        {% for _, rec in recommendations %}
+            <li>{{ rec }}</li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="/">Back to Assessment</a>
+</body>
+</html>
